@@ -1,5 +1,7 @@
 # C++ Piscine
 
+![swimmingpool](assets/piscine.jpg)
+
 ## What is the C++ Piscine ?
 
 This was a project in the 42 school curriculum, meant to introduce you to the OOP (Object-Oriented Programming) Paradigm and C++.   
