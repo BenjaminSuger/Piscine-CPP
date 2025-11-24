@@ -56,9 +56,6 @@ void	Harl::Complain(std::string level)
 	}
 	switch (info)
 	{
-		case 0:
-			(this ->*_functionptr[0])(); 
-			break;
 		case 1:
 			(this ->*_functionptr[1])(); 
 		case 2:
@@ -66,7 +63,11 @@ void	Harl::Complain(std::string level)
 		case 3:
 			(this ->*_functionptr[3])(); 
 		case 4:
-			(this ->*_functionptr[4])(); 
+			(this ->*_functionptr[4])();
+			break;
+		default:
+			(this ->*_functionptr[0])(); 
+
 	}
 }
 
