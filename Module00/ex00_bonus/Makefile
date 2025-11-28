@@ -18,7 +18,7 @@ SRCS = megaphone.cpp
 COLOUR_GREEN=\033[0;32m
 COLOUR_END=\033[0m
 
-FLAGS = -Wall -Werror -Wextra -g --std=c++98
+FLAGS = -Wall -Werror -Wextra -g
 
 OBJ=$(SRCS:.cpp=.o)
 
