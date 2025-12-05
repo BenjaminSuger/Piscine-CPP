@@ -12,8 +12,10 @@ Each module focused on a few concepts: Class, Encapsulation, Abstraction, Cast, 
 The main goal was to make you learn C++ after a long time using C (which is the main programming language of the cursus).
 
 
-###Module00### ; learn cin, cout, cerr / Class / private vs public  
-###Module01### ; pointer vs reference / new & delete / pointers to functions
+**Module00**; learn cin, cout, cerr / Class / private vs public  
+**Module01** ; pointer vs reference / new & delete / pointers to functions  
+**Module02** ; override / fixed point representation  
+**Module03** ; inheritance  
 
 
 This "piscine" does not exist anymore in the new 42 curriculum.
