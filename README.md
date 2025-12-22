@@ -17,7 +17,8 @@ The main goal was to make you learn C++ after a long time using C (which is the 
 **Module02** ; override / fixed point representation  
 **Module03** ; inheritance    
 **Module04** ; abstract class, interface, deep vs shallow copy    
-**Module05** ; try / catch and exception 
+**Module05** ; try / catch and exception   
+**Module06** ; static_cast, reinterpret_cast, dynamic_cast  
 
 
 This "piscine" does not exist anymore in the new 42 curriculum.
