@@ -6,13 +6,15 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 14:21:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/21 14:21:49 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/27 08:47:53 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
 
-Data::Data(std::string name = "random", std::string surname = "random")
+Data::Data() : _name("random"), _surname("random") {}
+
+Data::Data(std::string name, std::string surname)
     : _name(name), _surname(surname) {}
 
 Data::~Data() {}

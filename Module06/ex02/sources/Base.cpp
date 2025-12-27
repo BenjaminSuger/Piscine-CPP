@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 17:50:37 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/21 17:50:38 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/27 08:49:49 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,19 @@ void identify(Base *p) {
 
 void identify(Base &p) {
   try {
-    dynamic_cast<A &>(p);
+    (void)dynamic_cast<A &>(p);
     std::cout << "this is a A object\n";
     return;
   } catch (std::exception &e) {
   }
   try {
-    dynamic_cast<B &>(p);
+    (void)dynamic_cast<B &>(p);
     std::cout << "this is a B object\n";
     return;
   } catch (std::exception &e) {
   }
   try {
-    dynamic_cast<C &>(p);
+    (void)dynamic_cast<C &>(p);
     std::cout << "this is a C object\n";
     return;
   } catch (std::exception &e) {

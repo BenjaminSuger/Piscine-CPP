@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:47:13 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/17 16:59:11 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/27 09:03:00 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ bool checkValidity(std::string string) {
   if (*ptr_end == 'f' && *(ptr_end + 1) == '\0')
     return true;
   if (*ptr_end != '\0' && *(ptr_end + 1) == '\0')
-    return true;
+    return false;
   return false;
 }
 

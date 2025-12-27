@@ -11,20 +11,20 @@
 /* ************************************************************************** */
 
 #ifndef BASE_HPP
-# define BASE_HPP
+#define BASE_HPP
 
-# include <iostream>
-# include <exception>
-# include <cstdlib>
-# include <ctime>
+#include <cstdlib>
+#include <ctime>
+#include <exception>
+#include <iostream>
 
 class Base {
-	public:
-		virtual ~Base();
+public:
+  virtual ~Base();
 };
 
-Base* generate(void);
-void identify(Base* p);
-void identify(Base& p);
+Base *generate(void);
+void identify(Base *p);
+void identify(Base &p);
 
 #endif
