@@ -6,16 +6,17 @@
 #    By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/07 08:45:05 by bsuger            #+#    #+#              #
-#    Updated: 2025/11/19 13:49:35 by bsuger           ###   ########.fr        #
+#    Updated: 2025/12/28 11:24:03 by bsuger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 
-NAME = 
-SRCS = 
+NAME = ex01
+SRCS = ./sources/Span.cpp \
+       ./sources/main.cpp
 
-HEADER =  
+HEADER = ./includes/Span.hpp
 
 COLOUR_GREEN=\033[0;32m
 COLOUR_END=\033[0m
