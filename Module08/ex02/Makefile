@@ -12,10 +12,10 @@
 
 .SILENT:
 
-NAME = 
+NAME = ex02
 SRCS = ./sources/main.cpp
 
-HEADER =  
+HEADER =  ./includes/MutantStack.hpp
 
 COLOUR_GREEN=\033[0;32m
 COLOUR_END=\033[0m

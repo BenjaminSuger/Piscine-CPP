@@ -9,6 +9,10 @@
 /*   Updated: 2025/12/29 16:27:34 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <iostream>
+#include "MutantStack.hpp"
+
 int main() {
   MutantStack<int> mstack;
   mstack.push(5);
@@ -29,5 +33,5 @@ int main() {
     ++it;
   }
   std::stack<int> s(mstack);
-  return
+  return 0;
 }
