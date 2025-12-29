@@ -6,11 +6,12 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:22:42 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/28 13:25:53 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/29 15:54:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+#include <list>
 
 int main(void) {
 	try {
@@ -29,21 +30,52 @@ int main(void) {
 		std::vector<int> toAdd;
 		toAdd.push_back(42);
 		toAdd.push_back(16);
-		toAdd.push_back(-7);
-		toAdd.push_back(0);
+		toAdd.push_back(7);
+		toAdd.push_back(89798);
 		
 		Span test(4);
 		test.addNumber(toAdd.begin(), toAdd.end());
 		test.printContent();
-
-		//ici faudra mettre en place longest span et shortestspan pour montrer que ca a marche
+		std::cout << "Longest Span: " << test.longestSpan() << "\n";
+		std::cout << "Shortest Span: " << test.shortestSpan() << "\n";
 
 	} catch (std::exception &e) {
 		std::cout << e.what() << "\n";
 	}
-
-
-
-
-	//un test ca serait de faire un Span de capacity 10 mais de mettre 3 trucs dedans et de voir si ca casse pas le shorteset span ou longestspan etc....
+	try {
+		std::cout << "\nUSING SPAN SECOND ADD NUMBER BUT WITH DIFFERENTS  CONTAINER\n";
+		std::cout << "creation of an array with 4 elements inside\n";
+		int array[4] = {1, 2, 3, 4};
+		Span test(8);
+		test.addNumber(&array[0], &array[3]+1);
+		test.printContent();
+		std::cout << "creation of a list with 4 more elements inside\n";
+		std::list<int> toAdd;
+		toAdd.push_back(85);
+		toAdd.push_back(1);
+		toAdd.push_back(96);
+		toAdd.push_back(87);
+		test.addNumber(toAdd.begin(), toAdd.end());
+		test.printContent();
+		std::cout << "Longest Span: " << test.longestSpan() << "\n";
+		std::cout << "Shortest Span: " << test.shortestSpan() << "\n";
+		
+	} catch (std::exception &e) {
+		std::cout << e.what() << "\n";
+	}
 }
+
+/*
+int main()
+{
+	Span sp = Span(5);
+	sp.addNumber(6);
+	sp.addNumber(-3);
+	sp.addNumber(17);
+	sp.addNumber(9);
+	sp.addNumber(11);
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
+	return 0;
+}
+*/

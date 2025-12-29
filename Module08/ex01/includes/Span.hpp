@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 10:15:25 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/28 13:23:04 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/29 13:24:26 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <vector>
 # include <algorithm>
-# include <stdexcept>
+# include <exception>
 
 class Span {
 	private:
@@ -30,12 +30,20 @@ class Span {
 		void addNumber(int num);
 		template <typename T> 
 		void addNumber(T begin, T end) {
-			for (T it = begin; it != end; it++)
+			for (T it = begin; it != end ; it++)
 				_vector.push_back(*it);
 		}
 		int longestSpan();
 		int shortestSpan();
 		void printContent();
+		class noCapacity : public std::exception {
+			public :
+				virtual const char * what() const throw();
+		};
+		class notEnoughValue : public std::exception {
+			public :
+				virtual const char * what() const throw();
+		};
 };
 
 #endif
