@@ -6,7 +6,7 @@
 #    By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/07 08:45:05 by bsuger            #+#    #+#              #
-#    Updated: 2025/12/27 10:08:50 by bsuger           ###   ########.fr        #
+#    Updated: 2025/12/29 07:42:08 by bsuger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,3 +76,6 @@ game:
 		fi; \
 	done; \
 	echo ""
+
+
+.PHONY: all clean fclean re game
