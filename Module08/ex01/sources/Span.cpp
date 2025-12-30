@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:07:13 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/29 15:54:39 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/30 14:43:12 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ Span::Span(const Span &copy) : _capacity(copy._capacity) {
 Span &Span::operator=(const Span &old) {
   if (this != &old) {
     _capacity = old._capacity;
-    _vector.resize(_capacity);
-    for (unsigned int i = 0; i < _capacity; i++)
-      _vector.push_back(old._vector[i]);
-  }
+    _vector = old._vector;
   return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 10:15:25 by bsuger            #+#    #+#             */
-/*   Updated: 2025/12/29 13:24:26 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/12/30 14:42:28 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ public:
   void addNumber(int num);
   template <typename T> void addNumber(T begin, T end) {
     for (T it = begin; it != end; it++)
-      _vector.push_back(*it);
+	    if (_vector.size() + 1 <= _capacity)
+		    _vector.push_back(num);
+	    else
+		    throw noCapacity();
   }
   int longestSpan();
   int shortestSpan();
