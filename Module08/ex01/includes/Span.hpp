@@ -11,39 +11,39 @@
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
-# define SPAN_HPP
+#define SPAN_HPP
 
-# include <iostream>
-# include <vector>
-# include <algorithm>
-# include <exception>
+#include <algorithm>
+#include <exception>
+#include <iostream>
+#include <vector>
 
 class Span {
-	private:
-		unsigned int _capacity;
-		std::vector<int> _vector;
-	public:
-		Span(unsigned int capacity);
-		~Span();
-		Span(const Span& copy);
-		Span& operator=(const Span& old);
-		void addNumber(int num);
-		template <typename T> 
-		void addNumber(T begin, T end) {
-			for (T it = begin; it != end ; it++)
-				_vector.push_back(*it);
-		}
-		int longestSpan();
-		int shortestSpan();
-		void printContent();
-		class noCapacity : public std::exception {
-			public :
-				virtual const char * what() const throw();
-		};
-		class notEnoughValue : public std::exception {
-			public :
-				virtual const char * what() const throw();
-		};
+private:
+  unsigned int _capacity;
+  std::vector<int> _vector;
+
+public:
+  Span(unsigned int capacity);
+  ~Span();
+  Span(const Span &copy);
+  Span &operator=(const Span &old);
+  void addNumber(int num);
+  template <typename T> void addNumber(T begin, T end) {
+    for (T it = begin; it != end; it++)
+      _vector.push_back(*it);
+  }
+  int longestSpan();
+  int shortestSpan();
+  void printContent();
+  class noCapacity : public std::exception {
+  public:
+    virtual const char *what() const throw();
+  };
+  class notEnoughValue : public std::exception {
+  public:
+    virtual const char *what() const throw();
+  };
 };
 
 #endif
