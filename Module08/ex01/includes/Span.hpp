@@ -30,11 +30,9 @@ public:
   Span &operator=(const Span &old);
   void addNumber(int num);
   template <typename T> void addNumber(T begin, T end) {
-    for (T it = begin; it != end; it++)
-	    if (_vector.size() + 1 <= _capacity)
-		    _vector.push_back(num);
-	    else
+	  if (( std::distance(begin, end) + _vector.size())> _capacity)
 		    throw noCapacity();
+	  _vector.insert(_vector.end(), begin, end);
   }
   int longestSpan();
   int shortestSpan();

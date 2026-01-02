@@ -25,6 +25,7 @@ Span &Span::operator=(const Span &old) {
   if (this != &old) {
     _capacity = old._capacity;
     _vector = old._vector;
+  }
   return *this;
 }
 
